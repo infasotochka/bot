@@ -186,6 +186,13 @@ type Message struct {
 	VoiceChatParticipantsInvited  *VoiceChatParticipantsInvited  `json:"voice_chat_participants_invited,omitempty"`
 	WebAppData                    *WebAppData                    `json:"web_app_data,omitempty"`
 	ReplyMarkup                   *InlineKeyboardMarkup          `json:"reply_markup,omitempty"`
+	GuestBotCallerUser            *User                          `json:"guest_bot_caller_user,omitempty"`
+	GuestBotCallerChat            *Chat                          `json:"guest_bot_caller_chat,omitempty"`
+	GuestQueryId                  string                         `json:"guest_query_id,omitempty"`
+}
+
+type SentGuestMessage struct {
+	InlineMessageId string `json:"inline_message_id"`
 }
 
 // PreparedInlineMessage https://core.telegram.org/bots/api#preparedinlinemessage

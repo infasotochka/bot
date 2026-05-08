@@ -57,6 +57,12 @@ func (b *Bot) SendMessage(ctx context.Context, params *SendMessageParams) (*mode
 	return mes, err
 }
 
+func (b *Bot) AnswerGuestQuery(ctx context.Context, params *SentGuestMessageParams) (*models.SentGuestMessage, error) {
+	result := &models.SentGuestMessage{}
+	err := b.rawRequest(ctx, "answerGuestQuery", params, result)
+	return result, err
+}
+
 // ForwardMessage https://core.telegram.org/bots/api#forwardmessage
 func (b *Bot) ForwardMessage(ctx context.Context, params *ForwardMessageParams) (*models.Message, error) {
 	result := &models.Message{}

@@ -26,6 +26,7 @@ type Update struct {
 	ChatJoinRequest         *ChatJoinRequest             `json:"chat_join_request,omitempty"`
 	ChatBoost               *ChatBoostUpdated            `json:"chat_boost,omitempty"`
 	RemovedChatBoost        *ChatBoostRemoved            `json:"removed_chat_boost,omitempty"`
+	GuestMessage            *Message                     `json:"guest_message,omitempty"`
 }
 
 // allowed_updates https://core.telegram.org/bots/api#update
